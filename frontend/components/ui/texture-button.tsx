@@ -162,7 +162,7 @@ const TextureButton = React.forwardRef<HTMLButtonElement, UnifiedButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariantsOuter({ variant, size, shape }), className, "cursor-pointer")}
+        className={cn(buttonVariantsOuter({ variant, size, shape }), className, props.disabled ? "cursor-not-allowed" : "cursor-pointer")}
         ref={ref}
         {...props}
       >
